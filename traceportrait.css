@@ -1,0 +1,144 @@
+/*---- CROSS BROWSER DROPDOWN MENU ----*/
+ul.portrait {
+  margin: 0;
+  height: 100%;
+  width: 1800px;
+}
+ul.portrait a { display:block; font-family: Verdana; text-decoration: none;}
+ul.portrait, ul.portrait li, ul.portrait ul { list-style: none; color: rgb(255, 184, 94); margin: 0; padding: 0; }
+ul.portrait { z-index: 597;}
+
+ul.portrait li
+{
+  float: left;
+  padding: 0x;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  height: 100%;
+  width: 280px;
+  color: #707070;
+ }
+
+ul.portrait li img
+{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.1) inset;
+    display: inline-block;
+    height: 256px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+ul.portrait li.hover, ul.portrait li:hover
+{
+  position: relative;
+  z-index: 599;
+  cursor: hand;
+  background: #008AD0;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  color: #FFF;
+}
+
+/*We animate this nicely...*/
+
+div.portraitframe
+{
+  width: 950px;
+  max-width: 950px;
+  overflow: hidden;
+}
+
+div.portraits
+{
+  width: 2500px;
+  max-width: 2500px;
+  height: 280px;
+}
+
+div.singleimage
+{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.1) inset;
+    display: inline-block;
+/*    float: left;*/
+    height: 256px;
+    width: 256px;
+    overflow: hidden;
+    padding: 10px;
+
+	-webkit-animation: slideleft 17s;
+	-moz-animation: slideleft 17s;
+	-o-animation: slideleft 17s;
+	animation: slideleft 17s;
+
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+/*
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+*/
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  
+  animation-delay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+  -moz-animation-delay: 2.7s;
+  -o-animation-delay: 2.7s;
+}
+
+div.singleimage img
+{
+width: 100%;
+border-radius: 500px;
+}
+
+@keyframes slideleft
+{
+0%    {transform: translateX(0px);}
+25%  {transform: translateX(-500px);}
+50%  {transform: translateX(-1300px);}
+75%  {transform: translateX(-500px);}
+100% {transform: translateX(0);}
+}
+
+@-webkit-keyframes slideleft
+{
+0%    {-webkit-transform: translateX(0px);}
+25%  {-webkit-transform: translatex(-500px);}
+50%  {-webkit-transform: translateX(-1300px);}
+75%  {-webkit-transform: translateX(-500px);}
+100% {-webkit-transform: translateX(0px);}
+}
+/*
+@-moz-keyframes slideleft
+{
+0%   {left: 2000px;background: red;}
+25%  {left: 1000px;background: yellow;}
+50%  {left: 500px;background: blue;}
+100% {left: 0px;background: green;}
+}
+
+@-o-keyframes slideleft
+{
+0%   {left: 2000px;background: red;}
+25%  {left: 1000px;background: yellow;}
+50%  {left: 500px;background: blue;}
+100% {left: 0px;background: green;}
+}
+*/
+
+img { border: 0; }
