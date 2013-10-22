@@ -54,7 +54,7 @@ MESSAGE;
 	
 		Your Username: $uname
 
-		Activate your account: http://$_website/TraceDigitalTPS/accountverify.php?v=$ver&e=$e
+		Activate your account: http://$_website/tps_accountverify.php?v=$ver&e=$e
 
 		If you have any questions, please contact info@$_website.
 

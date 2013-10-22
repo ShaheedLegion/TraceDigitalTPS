@@ -59,7 +59,7 @@ We think you will enjoy using the system as much as we have enjoyed building and
     <h2 class="centered">Sign In to continue to the TPS</h2>
 
 	<div class="formdiv">
-	<form action="login.php" method="POST" id="login"> 
+	<form action="tps_login.php" method="POST" id="login"> 
 	   <div>
 		 <span><h3>UserName:</h3><input type="text" id="username" name="username" class="biginput" /></span><br/>
 		 <span><h3>Password:</h3><input type="password" id="password" name="password" class="biginput" /></span><br/>
@@ -69,7 +69,7 @@ We think you will enjoy using the system as much as we have enjoyed building and
 	</form>
 	
 	<div class="hiddenformdiv" id="forgotten">
-	<form action="login.php" method="POST" id="login"> 
+	<form action="tps_login.php" method="POST" id="login"> 
 	   <div>
 		 <span><h3>Email Address:</h3><input type="text" id="forgotemail" name="forgotemail" class="biginput" /></span><br/>
 		 <span><h3>Or UserName:</h3><input type="text" id="forgotusername" name="forgotusername" class="biginput" /></span><br/>
@@ -91,7 +91,7 @@ We think you will enjoy using the system as much as we have enjoyed building and
     <h2 class="centered">Or take a moment to register</h2>
 
 	<div class="formdiv" id="registerdiv">
-	<form action="login.php" method="POST" id="register"> 
+	<form action="tps_login.php" method="POST" id="register"> 
 	   <div>
 		 <span><h3>Name:</h3><input type="text" id="registername" name="registername" class="biginput" /></span><br/>
 		 <span><h3>Email Address:</h3><input type="text" id="registeremail" name="registeremail" class="biginput" /></span><br/>

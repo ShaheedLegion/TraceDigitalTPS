@@ -32,7 +32,7 @@ $page_name = 'TPS Verify Account';
    <div class="intro">
         <h2>Choose a Password</h2>
 
-        <form method="post" action="accountverify.php">
+        <form method="post" action="tps_accountverify.php">
             <div>
                 <label for="p">Choose a Password:</label>
                 <input type="password" name="p" id="p" class="biginput"/><br />
