@@ -55,7 +55,7 @@ This obviously depends on the type of user ... which we will have to deal with a
 		<div>
 		<span>
 			<h3>Project Type:</h3>
-			<?php echo $clients->fetchTypeSelection(); ?>
+			<?php echo $projects->fetchTypeSelection(); ?>
 		</span><br/>
 
 <!--

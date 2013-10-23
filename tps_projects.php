@@ -2,7 +2,7 @@
 	include_once 'pages/database.php';
 	include_once 'pages/globals.php';
 	include_once 'pages/debug.php';
-	include_once 'pages/tps_clients.php';
+	include_once 'tps_clients.php';
 
 /**
  * Handles display/edit of projects.
@@ -67,7 +67,8 @@ class TPSProjects
 		<h2>Overview of current projects</h2>
 		$this->_listopen
 		";
-
+		//need to select all projects and display them here.
+		//select projects etc...
 		$navmid = 
 		$this->formatProjectData('Project 1', '9786453125864', '22', '46', 'Shaheed')
 		.$this->formatProjectData('Project 2', '9786453125864', '12', '26', 'Wouter')
@@ -158,9 +159,14 @@ class TPSProjects
 		$row = $this->_db->query($query)->fetch();
 		
 		$options = '';
+		if ($row == null)
+		{
+			return "<div>Oops! There are no types configured. Please add some here:<br/><hr/></div>".
+			"<a href=\"tps_addtypes.php\" class=\"button\">Add Project Types</a><div>";
+		}
 		foreach ($row as $key => $value)
 		{
-			$options += "<option name=\"$key\" value=\"$value\" class=\"biginput\" />"
+			$options += "<option name=\"$key\" value=\"$value\" class=\"biginput\" />";
 		}
 		$select = "<select class=\"biginput\" name=\"Project Type\" onchange=\"javascript:fetchFields();\" id=\"project_type\">
 		$options

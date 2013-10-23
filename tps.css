@@ -24,6 +24,7 @@ div.hiddenformdiv
 	-webkit-box-shadow: 0 1px 3px #999;
 	-moz-box-shadow: 0 1px 3px #999;
 	font: bold 16px Helvetica;
+	margin-top: 20px;
 }
 
 .biginput
