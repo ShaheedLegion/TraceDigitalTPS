@@ -66,14 +66,15 @@
         </li>
         <li><span><a href="portfolio.php">Portfolio</a></span></li>
         <li><span><a href="contactus.php">Contact</a></span></li>
-<?php
+<!--
+< ? php
     if (isset($_SESSION['LoggedIn']) && isset($_SESSION['UserName']) && $_SESSION['LoggedIn'] == 1):
 ?>
                 <li><span><a href="tps_logout.php" >Log out TPS</a></span></li>
-<?php else: ?>
+< ? php else: ?>
                 <li><span><a href="tps_login.php">TPS Login</a></span></li>
-<?php endif; ?>
-
+< ? php endif; ?>
+-->
     </ul>
 
 </div>

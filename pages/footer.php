@@ -26,13 +26,13 @@
       <p><a href="mailto:admin@tracedigital.co.za">admin@tracedigital.co.za</a></p>
 	  <hr/>
 	  <h5>Call us</h5>
-      <p>+27 (0)21 696 1051</p>
-	  <p>+27 (0)21 696 0459</p>
+      <p>+27 (0)21 686 1051</p>
+	  <p>+27 (0)21 686 0459</p>
 	  <hr />
 	  <h4>Our Adress</h4>
       <hr /> 
       <p>96 Klipfontein Road</p>
-      <p>StoneFounttain Terrace</p>
+      <p>StoneFountain Terrace</p>
       <p>Suite 212</p>
       <p>Rondebosch</p>
       <p>Cape Town</p>
