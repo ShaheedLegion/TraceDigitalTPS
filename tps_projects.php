@@ -152,6 +152,15 @@ class TPSProjects
 		echo $navmain.$navmid.$navend;
 	}
 
+	function fetchTypeCount()
+	{
+		$query = "SELECT Count(ID) As theCount FROM Types";
+		$row = $this->_db->query($query)->fetch();
+		
+		$count = $row['theCount'];
+		return $count;
+	}
+
 	function fetchTypeSelection()
 	{
 		//<input type="text" id="projectname" name="projectname" class="biginput" />

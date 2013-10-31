@@ -50,15 +50,33 @@ This obviously depends on the type of user ... which we will have to deal with a
     <hr/>
     <h2 class="centered">Please fill in project details</h2>
 
-	<div class="formdiv" id="registerdiv">
-	<form action="tps_addproject.php" method="POST" id="add_project"> 
+	<?php if ($projects->fetchTypeCount())
+	{
+	$selection = $projects->fetchTypeSelection();
+	echo "
+	<div class=\"formdiv\" id=\"registerdiv\">
+	<form action=\"tps_addproject.php\" method=\"POST\" id=\"add_project\"> 
 		<div>
 		<span>
 			<h3>Project Type:</h3>
-			<?php echo $projects->fetchTypeSelection(); ?>
+			$selection
 		</span><br/>
 
-<!--
+		<div id=\"formfields\"></div>
+		 <input type=\"submit\" id=\"registersubmit\" value=\"Register\" class=\"button\" />
+	   </div>
+	</form>
+	</div>
+	";
+	}
+	else
+	{
+	echo "<div class=\"formdiv\"><p>Oops! There are no types configured. Please add some here:</p>".
+			"<p><a href=\"tps_addtypes.php\" class=\"button\">Add Project Types</a></p><div>";
+	}
+	?>
+
+		<!--
 		 <span>
 			<h3>Client:</h3>
 			< ?php $clients->fetchClientList(); ? >
@@ -84,13 +102,6 @@ This obviously depends on the type of user ... which we will have to deal with a
 			<input type="date" id="projectdue" name="projectdue" class="biginput" />
 		 </span><br/>
 -->
-		<div id="formfields"></div>
-		 <input type="submit" id="registersubmit" value="Register" class="button" />
-	   </div>
-	</form>
-	</div>
-
-
     </div>
   </div>
 </div>
