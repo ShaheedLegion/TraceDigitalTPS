@@ -1,8 +1,8 @@
 <?php
-	include_once 'pages/database.php';
-	include_once 'pages/globals.php';
-	include_once 'pages/debug.php';
-	include_once 'tps_clients.php';
+	include_once 'database.php';
+	include_once 'globals.php';
+	include_once 'debug.php';
+	include_once 'clients.php';
 
 /**
  * Handles display/edit of projects.
@@ -253,6 +253,46 @@ class TPSProjects
 		} 
 	}
 	
+	/*
+	Add a new Project Type to the Database. Automatically assigns the next available ID
+	to the new field type. Does not check for duplicates.
+	*/
+	public function addProjectType($fieldName)
+	{
+		$id = getNextID($this->_db, 'Types', 'ID');
+		
+		$query = "INSERT INTO Types (ID, TypeName) VALUES ($id, '$fieldName')";
+		if ($this->_db->query($query) == false)
+		{
+			echo "Could not add Type to Database at this time.";	//signal an error to the caller.
+			return;
+		}
+	}
+	
+	public function displayTypes()
+	{
+		if ($this->fetchTypeCount() == 0)
+		{
+			echo "No Types have been configured.";
+			return;
+		}
+
+		$query = "SELECT TypeName FROM Types";
+		$stmt = $this->_db->query($query);
+		$rowset = $stmt->fetchall();
+
+		$result = "<ul class=\"typelist\">";
+		$list = "";
+		
+		foreach ($rowset as $column)
+		{
+			$value = $column[0];
+			$list .= "<li> $value </li>";
+		}
+		$result .= "$list</ul>";
+		echo $result;
+	}
+
 	/*
 	Add a project ID to the database. This function does a little bit more and associates the fields of this project,
 	based on project type, with the current project. So if projects of this type should have an 'xyz' field, then this function will associate that field with this project - and add a blank value.

@@ -60,7 +60,7 @@
         <li><a href="#" class="dropdown">About +</a></li>
         <li class="sublinks">
             <span><a href="about.php#company">About the company</a></span>
-            <span><a href="traceteam.php">About the team</a></span>
+            <span><a href="team.php">About the team</a></span>
             <span><a href="about.php#books">About Digital books</a></span>
             <span><a href="about.php#websites">About Websites</a></span>
         </li>

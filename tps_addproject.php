@@ -1,5 +1,5 @@
 <?php
-$page_name = 'TPS Login';
+$page_name = 'TPS Add Project';
 	session_start();	//start the session, whether the user logged in or not.
 
 	include_once "pages/header.php";
@@ -7,8 +7,8 @@ $page_name = 'TPS Login';
 	include_once "pages/iecompat.php";
     include_once "pages/tpsusers.php";
 	include_once "pages/navigation.php";
-	include_once "tps_projects.php";
-	include_once "tps_clients.php";
+	include_once "pages/projects.php";
+	include_once "pages/clients.php";
 
 	$projects = new TPSProjects();
 	if (!empty($_GET['project_type']))

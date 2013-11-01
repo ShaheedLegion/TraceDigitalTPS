@@ -44,7 +44,7 @@ $page_name = 'TPS Login';
   
    <div class="intro">
    <h1>Welcome to the Trace Production System</h1>   
-    <p>In 2013 Trace Digital Services discovered that there was a better way to manage digital production ... that it was easier than having mountains of paperwork and constantly missed deadlines. Trace Digital Services discovered that with a little bit of elbow grease and a lot of magic, it was possible to eliminate the hassle and get on with the business of producing stunning digital content. In short, they discovered the power of a production management system. Written by their sole programmer <a href="traceteam.php#shaheed">Shaheed Abdol</a> - the system eliminates the gruntwork of managing a dynamic production cycle, and gives users a clear path to efficiency.<br/>
+    <p>In 2013 Trace Digital Services discovered that there was a better way to manage digital production ... that it was easier than having mountains of paperwork and constantly missed deadlines. Trace Digital Services discovered that with a little bit of elbow grease and a lot of magic, it was possible to eliminate the hassle and get on with the business of producing stunning digital content. In short, they discovered the power of a production management system. Written by their sole programmer <a href="team.php#shaheed">Shaheed Abdol</a> - the system eliminates the gruntwork of managing a dynamic production cycle, and gives users a clear path to efficiency.<br/>
 
 	The Trace Production System is entirely online and collaborative, which allows users to share information and resources from anywhere on the planet.<br/>
 We think you will enjoy using the system as much as we have enjoyed building and refining it. Take a moment to register, or sign in with your credentials

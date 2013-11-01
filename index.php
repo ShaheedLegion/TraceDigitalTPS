@@ -96,14 +96,14 @@ We service all major publishers, smaller publishers and self publishers in South
 who love what they do and always look forward to face new challenges.</h4>
       <div class="portraitframe">
         <div class="portraits">
-          <div class="singleimage"><a href="traceteam.php#andre" ><img src = "staff/andre.jpg" alt="Andre" ></a></div>
-          <div class="singleimage"><a href="traceteam.php#wendy" ><img src = "staff/wendy-fixed.jpg" alt="Wendy" ></a></div>
-          <div class="singleimage"><a href="traceteam.php#wouter" ><img src = "staff/wouter.jpg" alt="Wouter" ></a></div>
-          <div class="singleimage"><a href="traceteam.php#zuleiga" ><img src = "staff/zuleiga.jpg" alt="Zuleiga" ></a></div>
-          <div class="singleimage"><a href="traceteam.php#comfort" ><img src = "staff/comfort.jpg" alt="Comfort" ></a></div>
-          <div class="singleimage"><a href="traceteam.php#lance" ><img src = "staff/lance.jpg" alt="Lance" ></a></div>
-          <div class="singleimage"><a href="traceteam.php#dudley" ><img src = "staff/dudley.jpg" alt="Dudley" ></a></div>
-          <div class="singleimage"><a href="traceteam.php#shaheed" ><img src = "staff/shaheed.jpg" alt="Shaheed" ></a></div>
+          <div class="singleimage"><a href="team.php#andre" ><img src = "staff/andre.jpg" alt="Andre" ></a></div>
+          <div class="singleimage"><a href="team.php#wendy" ><img src = "staff/wendy-fixed.jpg" alt="Wendy" ></a></div>
+          <div class="singleimage"><a href="team.php#wouter" ><img src = "staff/wouter.jpg" alt="Wouter" ></a></div>
+          <div class="singleimage"><a href="team.php#zuleiga" ><img src = "staff/zuleiga.jpg" alt="Zuleiga" ></a></div>
+          <div class="singleimage"><a href="team.php#comfort" ><img src = "staff/comfort.jpg" alt="Comfort" ></a></div>
+          <div class="singleimage"><a href="team.php#lance" ><img src = "staff/lance.jpg" alt="Lance" ></a></div>
+          <div class="singleimage"><a href="team.php#dudley" ><img src = "staff/dudley.jpg" alt="Dudley" ></a></div>
+          <div class="singleimage"><a href="team.php#shaheed" ><img src = "staff/shaheed.jpg" alt="Shaheed" ></a></div>
         </div>
       </div>
   </div>

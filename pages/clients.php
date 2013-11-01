@@ -1,7 +1,7 @@
 <?php
-	include_once 'pages/database.php';
-	include_once 'pages/globals.php';
-	include_once 'pages/debug.php';
+	include_once 'database.php';
+	include_once 'globals.php';
+	include_once 'debug.php';
 
 /**
  * Handles display/edit of client profiles.
