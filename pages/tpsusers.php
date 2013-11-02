@@ -90,16 +90,24 @@ EMAIL;
 
 	public function displayLoginLink()
 	{
-		echo $this->_open."<h2>Please Login to access this portion of the TPS</h2><p>go to the <a href=\"login.php\">Login Page</a> to gain access to this portion of the site".$this->_close;
+		echo $this->_open."<h2>Please Login to access this portion of the TPS</h2><p>go to the <a href=\"tps_login.php\">Login Page</a> to gain access to this portion of the site".$this->_close;
 	}
 
 	public function checkLogin()
 	{
-		$_l = $_SESSION['LoggedIn'];
+		try
+		{
+			if (isset($_SESSION['LoggedIn']))
+			{
+				$_l = $_SESSION['LoggedIn'];
 		
-		if ($_l == 1)	//someone is logged in.
-			return true;
-		
+				if ($_l == 1)	//someone is logged in.
+					return true;
+			}
+		}
+		catch(Exception $ex)
+		{
+		}
 		return false;	//nobody islogged in
 	}
 
@@ -125,7 +133,7 @@ EMAIL;
             {
                 return array(4, $this->_open."<h2>Verification Error</h2>"
                     . "<p>This account has already been verified. "
-                    . "Did you <a href=\"login.php\">forget "
+                    . "Did you <a href=\"tps_login.php\">forget "
                     . "your password?</a>".$this->_close);
             }
             $stmt->closeCursor();
@@ -216,10 +224,66 @@ EMAIL;
 			return FALSE;
 		}
 	}
-	
+
+	public function fetchEmail($user)
+	{
+		$sql = "SELECT UserEmail FROM Users WHERE UserName='$user'";
+		if ($stmt = $this->_db->query($sql))
+		{
+			$row = $stmt->fetch();
+			$result = $row['UserEmail'];
+			return $result;
+		}
+		return '';
+	}
+
+	public function fetchName($email)
+	{
+		$sql = "SELECT UserName FROM Users WHERE UserEmail='$email'";
+		if ($stmt = $this->_db->query($sql))
+		{
+			$row = $stmt->fetch();
+			//echo "Executed Query : $sql";
+			$result = $row['UserName'];
+			//echo "Fecthed : $result";
+			return $result;
+		}
+		return '';
+	}
+
 	public function forgotAccount()
 	{
-		return 'the user forgot their account';
+		$u = '';
+		$e = '';
+		if (!empty($_POST['forgotusername']))
+		{
+			$u = trim($_POST['forgotusername']);
+			$e = $this->fetchEmail($u);
+		}
+		else if (!empty($_POST['forgotemail']))
+		{
+			$e = trim($_POST['forgotemail']);
+			//echo "Fetching UserName for : $e";
+			$u = $this->fetchName($e);
+		}
+
+        $v = sha1(time());
+		$sql = "UPDATE Users SET ver_code = '$v', verified = 0 WHERE UserName = '$u' and Useremail = '$e'";
+		//print_debug("Trying to execute query: ".$sql);
+			
+		if ($this->_db->query($sql))
+		{
+			if ($this->sendVerificationEmail($u, $e, $v))
+			{
+                return $this->_open."<h2> Success! </h2><p> An email containing your password reset code has been set, please check your mailbox for instructions. </p>".$this->_close;
+			}
+			else
+				return $this->_open."<h2> Error </h2><p> There was an error sending your verification email. Please <a href=\"mailto:admin@tracedigital.co.za\">contact us</a> for support, or try again. We apologize for the inconvenience. </p>".$this->_close;
+		}
+		else
+		{
+			return $this->_open."<h2> Error </h2><p> Couldn't update the verification code for $u. </p>".$this->_close;
+		}
 	}
 	
 	public function createAccount()

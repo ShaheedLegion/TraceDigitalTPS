@@ -164,23 +164,24 @@ class TPSProjects
 	function fetchTypeSelection()
 	{
 		//<input type="text" id="projectname" name="projectname" class="biginput" />
-		$query = "SELECT ID FROM Types";
-		$row = $this->_db->query($query)->fetch();
-		
+		$query = "SELECT ID, TypeName FROM Types";
+		$stmt = $this->_db->query($query);
+		$rowset = $stmt->fetchall();
+
 		$options = '';
-		if ($row == null)
+		
+		foreach ($rowset as $column)
 		{
-			return "<div>Oops! There are no types configured. Please add some here:<br/><hr/></div>".
-			"<a href=\"tps_addtypes.php\" class=\"button\">Add Project Types</a><div>";
-		}
-		foreach ($row as $key => $value)
-		{
-			$options += "<option name=\"$key\" value=\"$value\" class=\"biginput\" />";
+			$id = $column[0];
+			$name = $column[1];
+			$options .= "<option name=\"$name\" value=\"$id\" id=\"$id\" class=\"biginput\" >$name</option>";
 		}
 		$select = "<select class=\"biginput\" name=\"Project Type\" onchange=\"javascript:fetchFields();\" id=\"project_type\">
 		$options
 		</select>";
+		
 		return $select;
+
 	}
 
 	/*
@@ -203,12 +204,12 @@ class TPSProjects
 	function fetchProjectFields($typeid)
 	{
 		$query = "Select FieldID FROM ProjectTypeFields WHERE ProjectTypeID = $typeid";
-		$row = $this->_db->query($query)->fetch();
+		$rowset = $this->_db->query($query)->fetchall();
 		
 		$result = $this->_clients->fetchClientList();	//this is how we deal with compulsory/programmatic fields.
-		foreach ($row as $key => $value)
+		foreach ($rowset as $value)
 		{
-			$result += $this->formatField($value);
+			$result .= $this->formatField($value[0]);
 		}
 		return $result;
 	}

@@ -47,3 +47,12 @@ function displayFields(_response, _headers)
 		_node.innerHTML = _response;
 	}
 }
+
+function shownode(_id)
+{
+	var _node = document.getElementById(_id);
+	if (_node)
+	{
+		_node.style.display = 'block';
+	}
+}

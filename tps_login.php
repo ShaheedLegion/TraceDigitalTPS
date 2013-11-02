@@ -67,6 +67,7 @@ We think you will enjoy using the system as much as we have enjoyed building and
 		 <a href="javascript:shownode('forgotten');" class="button">Forgot Password</a>
 	   </div>
 	</form>
+	</div>
 	
 	<div class="hiddenformdiv" id="forgotten">
 	<form action="tps_login.php" method="POST" id="login"> 
@@ -77,10 +78,7 @@ We think you will enjoy using the system as much as we have enjoyed building and
 	   </div>
 	</form>
 	</div>
-
 	</div>
-
-  </div>
 </div>
 
 <div class="content">
