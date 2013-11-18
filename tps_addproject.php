@@ -2,18 +2,24 @@
 $page_name = 'TPS Add Project';
 	session_start();	//start the session, whether the user logged in or not.
 
-	include_once "pages/header.php";
-	include_once "pages/slideshow.php";
-	include_once "pages/iecompat.php";
     include_once "pages/tpsusers.php";
-	include_once "pages/navigation.php";
 	include_once "pages/projects.php";
 	include_once "pages/clients.php";
 
 	$projects = new TPSProjects();
 	if (!empty($_GET['project_type']))
 	{
-		echo $projects->fetchProjectFields($_GET['project_type']);
+		$projectFields = $projects->fetchProjectFields($_GET['project_type']);
+		if (empty($projectFields))
+		{
+			$output = "<p>There are no projectFields</p>".
+			"<style type=\"text/css\">".
+			"#registersubmit{display:none;}".
+			"#addfields{display:block;}".
+			"</style>";
+			echo $output;
+		}
+		return;
 	}
 	else if (!empty($_POST['projectname']))
 	{
@@ -23,6 +29,10 @@ $page_name = 'TPS Add Project';
 	}
 	else
 	{
+		include_once "pages/header.php";
+		include_once "pages/slideshow.php";
+		include_once "pages/iecompat.php";
+		include_once "pages/navigation.php";
 		$clients = new TPSClients();
 		$users = new TPSUsers();
 
@@ -50,30 +60,35 @@ This obviously depends on the type of user ... which we will have to deal with a
     <hr/>
     <h2 class="centered">Please fill in project details</h2>
 
-	<?php if ($projects->fetchTypeCount())
-	{
-	$selection = $projects->fetchTypeSelection();
-	echo "
-	<div class=\"formdiv\" id=\"registerdiv\">
-	<form action=\"tps_addproject.php\" method=\"POST\" id=\"add_project\"> 
-		<div>
-		<span>
-			<h3>Project Type:</h3>
-			$selection
-		</span><br/>
+	<?php 
+		if ($projects->fetchTypeCount())
+		{
+		$selection = $projects->fetchTypeSelection();
+		echo "
+		<div class=\"formdiv\" id=\"registerdiv\">
+		<form action=\"tps_addproject.php\" method=\"POST\" id=\"add_project\"> 
+			<div>
+			<span>
+				<h3>Project Type:</h3>
+				$selection
+			</span><br/>
 
-		<div id=\"formfields\"></div>
-		 <input type=\"submit\" id=\"registersubmit\" value=\"Register\" class=\"button\" />
-	   </div>
-	</form>
-	</div>
-	";
-	}
-	else
-	{
-	echo "<div class=\"formdiv\"><p>Oops! There are no types configured. Please add some here:</p>".
-			"<p><a href=\"tps_addtypes.php\" class=\"button\">Add Project Types</a></p><div>";
-	}
+			<div id=\"formfields\"></div>
+			 <input type=\"submit\" id=\"registersubmit\" value=\"Register\" class=\"button\" />
+		   </div>
+		</form>
+		</div>
+		<div class=\"formdiv\" id=\"addfields\">
+		<p>It seems that Project Fields have not been created yet, please add some:</p>
+		<a href=\"tps_addfields.php\" class=\"button\">Here</a><br/>
+		</div>
+		";
+		}
+		else
+		{
+		echo "<div class=\"formdiv\"><p>Oops! There are no types configured. Please add some here:</p>".
+				"<p><a href=\"tps_addtypes.php\" class=\"button\">Add Project Types</a></p><div>";
+		}
 	?>
 
 		<!--

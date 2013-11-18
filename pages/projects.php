@@ -204,14 +204,17 @@ class TPSProjects
 	function fetchProjectFields($typeid)
 	{
 		$query = "Select FieldID FROM ProjectTypeFields WHERE ProjectTypeID = $typeid";
-		$rowset = $this->_db->query($query)->fetchall();
-		
-		$result = $this->_clients->fetchClientList();	//this is how we deal with compulsory/programmatic fields.
-		foreach ($rowset as $value)
+		if ($stmt = $this->_db->query($query))
 		{
-			$result .= $this->formatField($value[0]);
+			$rowset = $stmt->fetchall();
+			$result = $this->_clients->fetchClientList();	//this is how we deal with compulsory/programmatic fields.
+			foreach ($rowset as $value)
+			{
+				$result .= $this->formatField($value[0]);
+			}
+			return $result;
 		}
-		return $result;
+		return '';
 	}
 /**********************
 	The following interface is used to add projects to the database...

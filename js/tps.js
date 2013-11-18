@@ -56,3 +56,19 @@ function shownode(_id)
 		_node.style.display = 'block';
 	}
 }
+
+function hidenode(_id)
+{
+	alert("Hiding node");
+	var _node = document.getElementById(_id);
+	if (_node)
+	{
+		_node.style.display = 'none';
+		alert("Node hidden");
+	}
+}
+
+function run()
+{
+	alert("Hello World!");
+}
