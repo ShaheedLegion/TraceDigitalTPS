@@ -342,7 +342,7 @@ div.boardright table td img:hover
 div.bottom-bg
 {
 	height: 100%;
-	height: 560px !important;
+	height: 540px !important;
 	width: 950px;
 	min-width: 950px;
 
@@ -501,16 +501,19 @@ p.footer-text
 
 div.wide
 {
-	display: inline-block;
-	width: 100%;
-	height: 100px;
+	display: block;
+	float:left;
+	width: 50%;
+/*	height: 100px;
 	max-height: 100px;
 	background: #ffffff;
+*/
 }
 
 div.wide img
 {
-	height: 100px;
+/*	height: 100px;*/
+	width:94%;
 	border: 0;
 	margin: 0;
 	padding: 0;

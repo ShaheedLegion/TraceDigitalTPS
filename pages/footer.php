@@ -19,6 +19,17 @@
 		<hr/>
 	</div>
 
+      <div class="technologies">
+      <h4>Affiliates</h4>
+      <hr />
+      <div class="wide">
+      <a href="http://www.megadigital.co.za"><img src="icondata/megadigitalsmall.png"  alt="mega digital" /></a>
+	  </div>
+	  <div class="wide">
+      <a href="http://www.onthedot.co.za"><img src="icondata/onthedotsmall.png"  alt="on the dot" /></a>
+      </div>
+      </div>
+	
       <div class="bottom-item">
 	  <h4>Contact Us</h4>
       <hr />
@@ -29,16 +40,19 @@
       <p>+27 (0)21 686 1051</p>
 	  <p>+27 (0)21 686 0459</p>
 	  <hr />
-	  <h4>Our Adress</h4>
-      <hr /> 
-      <p>96 Klipfontein Road</p>
-      <p>StoneFountain Terrace</p>
-      <p>Suite 212</p>
-      <p>Rondebosch</p>
-      <p>Cape Town</p>
-      <p>7700</p>
       </div>
 
+	<div class="bottom-item">
+		<h4>Our Adress</h4>
+		<hr /> 
+		<p>96 Klipfontein Road</p>
+		<p>StoneFountain Terrace</p>
+		<p>Suite 212</p>
+		<p>Rondebosch</p>
+		<p>Cape Town</p>
+		<p>7700</p>
+	</div>
+<!--
       <div class="bottom-item">
       <h4>Client Feedback</h4>
       <hr />
@@ -47,28 +61,17 @@
 			<a href="feedback.php">Read More</a>
       </p>
       </div>
+-->
+		<div class="bottom-item">
+			  <h4>Help &amp; Support</h4>
+			  <hr />
+				<ul class="help">
+				<li><a href="faq.php">FAQ</a></li>
+				<li><a href="help.php">Help</a></li>
+				</ul>
+			  <hr /> 
+		</div>
 
-<div class="bottom-item">
-      <h4>Help &amp; Support</h4>
-      <hr />
-        <ul class="help">
-        <li><a href="faq.php">FAQ</a></li>
-        <li><a href="help.php">Help</a></li>
-        </ul>
-      <hr /> 
-</div>
-      <div class="bottom-item">
-      <h4>Affiliates</h4>
-      <hr />
-      <div class="wide">
-      <a href="http://www.megadigital.co.za"><img src="icondata/megadigitalsmall.png"  alt="mega digital" /></a>
-	  </div>
-	  <hr/>
-	  <div class="wide">
-      <a href="http://www.onthedot.co.za"><img src="icondata/onthedotsmall.png"  alt="on the dot" /></a>
-      </div>
-      </div>
-<!--	  <hr/>-->
     </div>
   </div>
     <div class="footer">
