@@ -29,7 +29,7 @@
 
 <div class="navdiv">
 	<div class="iecompat">
-		<img src="icondata/banner.png" alt="_"/>
+		<a href="index.php"><img src="icondata/banner.png" alt="_"/></a>
 	</div>
 	<!--[if lt IE 8]>
 	<style type="text/css">
@@ -37,15 +37,19 @@
 		div.iecompat img{display: none;}
 	</style>
 
+	<a href="index.php">
 	<div style="float: left; width:213px; height:100px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
 		 src='icondata/banner.png', sizingMethod='scale');"></div>
+	</a>
 	<![endif]-->
 
 <!-- - - - - Using jQuery for CSS Menus on older browsers - - - - -->
     <ul id="nav" class="drop">
+<!--
         <li class="listimg"><a href="index.php">
-		<?php print(getcompat('40px', '40px', 'icondata/home.png', 'home', '')); ?>
+		< ?php print(getcompat('40px', '40px', 'icondata/home.png', 'home', '')); ? >
 	 </a></li>
+-->
         <li><a href="#" class="dropdown">Services +</a></li>
         <li class="sublinks">
             <span><a href="services.php#typesetting">Typesetting</a></span>
@@ -65,14 +69,15 @@
             <span><a href="about.php#websites">About Websites</a></span>
         </li>
         <li><span><a href="portfolio.php">Portfolio</a></span></li>
+		<li><span><a href="feedback.php">Feedback</a></span></li>
         <li><span><a href="contactus.php">Contact</a></span></li>
 
 <?php
     if (isset($_SESSION['LoggedIn']) && isset($_SESSION['UserName']) && $_SESSION['LoggedIn'] == 1):
 ?>
-                <li><span><a href="tps_logout.php" >Log out TPS</a></span></li>
+                <li><span><a href="tps_logout.php" >Logout</a></span></li>
 <?php else: ?>
-                <li><span><a href="tps_login.php">TPS Login</a></span></li>
+                <li><span><a href="tps_login.php">Login</a></span></li>
 <?php endif; ?>
 
     </ul>
