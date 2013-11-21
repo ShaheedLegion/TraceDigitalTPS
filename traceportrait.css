@@ -62,12 +62,15 @@ div.singleimage
     width: 256px;
     overflow: hidden;
     padding: 10px;
+	background-color: #404D59;
+	border-radius: 10% 10% 10% 10%;
 }
 
 div.singleimage img
 {
 /*width: 100%;*/
 /*border-radius: 500px;*/
+	border-radius: 50% 50% 50% 50%;
 }
 
 div.singleimage h4

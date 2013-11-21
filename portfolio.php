@@ -21,7 +21,7 @@ $page_name = 'Portfolio';
     <div class="sectionrule"></div>
 	<div class="intro">
 	<div class="boarditem-free-left">
-		<div class="left-square"><img src="icondata/drawingicon.png" alt="Example Drawing" /></div>
+		<div class="left-square"><a href="icondata/drawing.png"><img src="icondata/drawingicon.png" alt="Example Drawing" /></a></div>
 		<div class="right">
 		<h4>Drawings</h4>
 		<p>
@@ -38,7 +38,7 @@ $page_name = 'Portfolio';
     <div class="sectionrule"></div>
 	<div class="intro">
 	<div class="boarditem-free-left">
-		<div class="left-square"><img src="icondata/adobe.png" alt="Example PDF" /></div>
+		<div class="left-square"><a href="icondata/trace_sample_drawing.pdf"><img src="icondata/adobe.png" alt="Example PDF" /></a></div>
 		<div class="right">
 		<h4>PDF</h4>
 		<p>
@@ -55,7 +55,7 @@ $page_name = 'Portfolio';
     <div class="sectionrule"></div>
 	<div class="intro">
 	<div class="boarditem-free-left">
-		<div class="left-square"><img src="icondata/sample_epub_cover.jpg" alt="Sample EPUB" /></div>
+		<div class="left-square"><a href="icondata/trace_epub_sample.epub"><img src="icondata/sample_epub_cover.jpg" alt="Sample EPUB" /></a></div>
 		<div class="right">
 		<h4>EPUB</h4>
 		<p>
@@ -72,7 +72,7 @@ $page_name = 'Portfolio';
     <div class="sectionrule"></div>
 	<div class="intro">
 	<div class="boarditem-free-left">
-		<div class="left-square"><img src="icondata/sample_epub_cover.jpg" alt="Sample MOBI" /></div>
+		<div class="left-square"><a href="icondata/trace_sample_mobi.mobi"><img src="icondata/sample_epub_cover.jpg" alt="Sample MOBI" /></a></div>
 		<div class="right">
 		<h4>MOBI</h4>
 		<p>

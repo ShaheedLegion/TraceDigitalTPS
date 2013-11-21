@@ -13,7 +13,7 @@ div.hiddenformdiv
 
 .button
 {
-	background: url(http://cdn.css-tricks.com/images/button-bg.png) repeat-x;
+	background: url("icondata/button-bg.png") repeat-x;
 	-moz-border-radius: 5px;
 	padding: 6px 12px;
 	border: none;
@@ -101,12 +101,12 @@ ul.bigitem li span a:hover{ color: #FFFFFF; width: 100%; height: 100%; }
 
 div.usernavdiv
 {
-width: 950px;
-height: 100px;
-margin-left: auto;
-margin-right: auto;
-border-left: 1px solid #E0E0E0;
-border-right: 1px solid #E0E0E0;
+	width: 950px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
 }
 
 ul.dropdownlist li a
@@ -132,11 +132,11 @@ ul.dropdownlist, ul.dropdownlist li, ul.dropdownlist ul
 	padding: 0;
 	display: inline;
 	float: left;
-	
-  border-width: 0 1px 0 0;
-  border-style: solid;
-  border-right-color: #E0E0E0;
-  border-left-color: transparent;
+
+	border-width: 0 1px 0 0;
+	border-style: solid;
+	border-right-color: #E0E0E0;
+	border-left-color: transparent;
 }
 
 ul.dropdownlist { z-index: 597;}
